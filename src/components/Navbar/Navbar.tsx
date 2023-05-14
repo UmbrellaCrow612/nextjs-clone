@@ -1,11 +1,11 @@
 import Link from "next/link";
 
-/* eslint-disable @next/next/no-img-element */
 export default function Navbar() {
   return (
     <>
-      <nav className="w-full border max-w-screen-xl mx-auto h-16 flex items-center px-10">
+      <nav className="w-full border max-w-screen-xl mx-auto h-16 flex items-center px-10 justify-between">
         <div className="flex items-center gap-6">
+          {/* Left */}
           <div className="flex gap-1 items-center justify-center">
             <div className="">
               <svg
@@ -73,6 +73,7 @@ export default function Navbar() {
             </Link>
           </div>
 
+          {/* Desktop links */}
           <div className="flex pl-5 gap-5">
             <button className="text-sm text-[#666] py-1 px-0.5 font-light outline-[#0070f3] outline-offset-1 rounded-md">
               Showcase
@@ -129,6 +130,26 @@ export default function Navbar() {
               </svg>
             </button>
           </div>
+        </div>
+        {/* Right */}
+        <div className="flex gap-2">
+          <button className="flex items-center justify-center text-sm px-3 py-2 rounded-md border font-medium gap-2 border-[#ededed] hover:border-black transition-all ease-in-out">
+            <svg
+              aria-label="Vercel logo mark"
+              height="13"
+              role="img"
+              viewBox="0 0 74 64"
+            >
+              <path
+                d="M37.5896 0.25L74.5396 64.25H0.639648L37.5896 0.25Z"
+                fill="#000"
+              />
+            </svg>
+            Deploy
+          </button>
+          <button className="flex items-center justify-center text-sm px-4 py-2 rounded-md border font-medium transition-all ease-in-out bg-black text-white hover:bg-white hover:text-black hover:border-black">
+            Learn
+          </button>
         </div>
       </nav>
     </>
