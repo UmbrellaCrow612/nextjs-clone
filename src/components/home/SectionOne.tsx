@@ -1,8 +1,10 @@
+import Link from "next/link";
+
 export default function SectionOne() {
   return (
     <>
       <section className="flex items-center justify-center max-w-screen-xl mx-auto h-[8rem]">
-        <div className="border rounded-md shadow-md border-[#efefef] flex items-center h-[3.8rem]">
+        <Link className="border rounded-md shadow-md border-[#efefef] flex items-center h-[3.8rem] hover:bg-opacity-10 hover:bg-gray-200 transition-all ease-in-out" href="/">
           <div className="flex gap-6 px-4">
             <div className="relative flex items-center gap-2">
               <WiredRectangleSvg />
@@ -21,7 +23,7 @@ export default function SectionOne() {
           <div className="flex items-center justify-center h-full px-4 border-l">
             <ArrowRight />
           </div>
-        </div>
+        </Link>
       </section>
     </>
   );
