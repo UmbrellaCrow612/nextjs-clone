@@ -3,10 +3,10 @@ import Link from "next/link";
 export default function Navbar() {
   return (
     <>
-      <nav className="w-full max-w-screen-xl mx-auto h-16 flex items-center px-10 justify-between">
+      <nav className="flex items-center justify-between w-full h-16 max-w-screen-xl px-6 mx-auto lg:px-10">
         <div className="flex items-center gap-6">
           {/* Left */}
-          <div className="flex gap-1 items-center justify-center">
+          <div className="flex items-center justify-center gap-1">
             <div className="">
               <svg
                 aria-label="Vercel logo mark"
@@ -74,7 +74,7 @@ export default function Navbar() {
           </div>
 
           {/* Desktop links */}
-          <div className="flex pl-4 gap-5">
+          <div className="flex gap-5 pl-4">
             <button className="text-sm text-[#666] py-1 px-0.5 font-light outline-[#0070f3] outline-offset-1 rounded-md">
               Showcase
             </button>
