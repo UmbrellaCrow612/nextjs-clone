@@ -74,7 +74,7 @@ export default function Navbar() {
           </div>
 
           {/* Desktop links */}
-          <div className="flex pl-5 gap-5">
+          <div className="flex pl-4 gap-5">
             <button className="text-sm text-[#666] py-1 px-0.5 font-light outline-[#0070f3] outline-offset-1 rounded-md">
               Showcase
             </button>
