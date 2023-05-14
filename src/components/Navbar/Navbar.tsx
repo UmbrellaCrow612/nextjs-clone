@@ -4,8 +4,9 @@ export default function Navbar() {
   return (
     <>
       <nav className="flex items-center justify-between w-full h-16 max-w-screen-xl px-6 mx-auto lg:px-10">
+        {/* Left */}
         <div className="flex items-center gap-6">
-          {/* Left */}
+          {/* Logos */}
           <div className="flex items-center justify-center gap-1">
             <div className="">
               <svg
@@ -74,7 +75,7 @@ export default function Navbar() {
           </div>
 
           {/* Desktop links */}
-          <div className="flex gap-5 pl-4">
+          <div className="hidden gap-5 pl-4 lg:flex">
             <button className="text-sm text-[#666] py-1 px-0.5 font-light outline-[#0070f3] outline-offset-1 rounded-md">
               Showcase
             </button>
@@ -132,7 +133,7 @@ export default function Navbar() {
           </div>
         </div>
         {/* Right */}
-        <div className="flex gap-2">
+        <div className="hidden gap-2 lg:flex">
           <button className="flex items-center justify-center text-sm px-3 py-2 rounded-md border font-medium gap-2 border-[#ededed] hover:border-black transition-all ease-in-out outline-offset-[3px] outline-[#0070f3]">
             <svg
               aria-label="Vercel logo mark"
@@ -149,6 +150,26 @@ export default function Navbar() {
           </button>
           <button className="flex items-center justify-center text-sm px-4 py-2 rounded-md border font-medium transition-all ease-in-out bg-black text-[#eaeaea] hover:bg-white hover:text-black hover:border-black outline-offset-[3px] outline-[#0070f3]">
             Learn
+          </button>
+        </div>
+
+        <div className="lg:hidden">
+          <button className="text-sm text-[#666] py-1 px-0.5 font-light outline-[#0070f3] outline-offset-1 rounded-md">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="28"
+              height="28"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <line x1="4" x2="20" y1="12" y2="12"></line>
+              <line x1="4" x2="20" y1="6" y2="6"></line>
+              <line x1="4" x2="20" y1="18" y2="18"></line>
+            </svg>
           </button>
         </div>
       </nav>
