@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function Navbar() {
   return (
     <>
-      <nav className="w-full border max-w-screen-xl mx-auto h-16 flex items-center px-10 justify-between">
+      <nav className="w-full max-w-screen-xl mx-auto h-16 flex items-center px-10 justify-between">
         <div className="flex items-center gap-6">
           {/* Left */}
           <div className="flex gap-1 items-center justify-center">
@@ -133,7 +133,7 @@ export default function Navbar() {
         </div>
         {/* Right */}
         <div className="flex gap-2">
-          <button className="flex items-center justify-center text-sm px-3 py-2 rounded-md border font-medium gap-2 border-[#ededed] hover:border-black transition-all ease-in-out">
+          <button className="flex items-center justify-center text-sm px-3 py-2 rounded-md border font-medium gap-2 border-[#ededed] hover:border-black transition-all ease-in-out outline-offset-[3px] outline-[#0070f3]">
             <svg
               aria-label="Vercel logo mark"
               height="13"
@@ -147,7 +147,7 @@ export default function Navbar() {
             </svg>
             Deploy
           </button>
-          <button className="flex items-center justify-center text-sm px-4 py-2 rounded-md border font-medium transition-all ease-in-out bg-black text-white hover:bg-white hover:text-black hover:border-black">
+          <button className="flex items-center justify-center text-sm px-4 py-2 rounded-md border font-medium transition-all ease-in-out bg-black text-[#eaeaea] hover:bg-white hover:text-black hover:border-black outline-offset-[3px] outline-[#0070f3]">
             Learn
           </button>
         </div>
