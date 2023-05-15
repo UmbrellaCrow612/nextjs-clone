@@ -4,8 +4,11 @@ export default function SectionOne() {
   return (
     <>
       <section className="flex items-center justify-center max-w-screen-xl mx-auto h-[8rem]">
-        <Link className="border rounded-md shadow-md border-[#efefef] flex items-center h-[3.8rem] hover:bg-opacity-10 hover:bg-gray-200 transition-all ease-in-out" href="/">
-          <div className="flex gap-6 px-4">
+        <Link
+          className="border rounded-md shadow-md border-[#efefef] flex items-center h-[3.7rem] hover:bg-opacity-10 hover:bg-gray-200 transition-all ease-in-out gap-3"
+          href="/"
+        >
+          <div className="flex gap-8 px-3">
             <div className="relative flex items-center gap-2">
               <WiredRectangleSvg />
               <TriangleSvg />
@@ -14,9 +17,9 @@ export default function SectionOne() {
               <MultiXSvg />
             </div>
             <div className="flex items-center gap-1 text-sm">
-              <span className="font-semibold">Vercel Ship</span>
-              <span className="font-light">
-                ran from May 1st - May 5th. Check out our five announcements.
+              <span className="text-base font-semibold">Vercel Ship</span>
+              <span className="font-normal text-[#6A6A6A]">
+                ran May 1st - May 5th. Check out our five announcements.
               </span>
             </div>
           </div>
