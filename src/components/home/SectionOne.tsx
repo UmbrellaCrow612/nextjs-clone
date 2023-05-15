@@ -24,11 +24,31 @@ export default function SectionOne() {
             </div>
           </div>
           <div className="flex items-center justify-center h-full px-4 border-l">
-            <ArrowRight />
+            <ArrowRight size={24} />
           </div>
         </Link>
 
         {/* Mobile version */}
+
+        <Link
+          className="h-[6rem] border shadow-md w-[23rem] rounded-md flex justify-between items-end py-3 px-4 md:hidden relative"
+          href="/"
+        >
+          <div>
+            <p className="flex flex-col gap-2 text-sm font-light leading-tight text-[#6A6A6A]">
+              <span>
+                <strong className="font-semibold text-black">
+                  Vercel Ship{" "}
+                </strong>
+                ran May 1st - May 5th .
+              </span>
+              Check out our five announcements.
+            </p>
+          </div>
+          <div className="p-1 border rounded-md">
+            <ArrowRight size={15} />
+          </div>
+        </Link>
       </section>
     </>
   );
@@ -303,19 +323,19 @@ const MultiXSvg = () => {
   );
 };
 
-const ArrowRight = () => {
+const ArrowRight = ({ size }: { size: number }) => {
   return (
     <>
       <svg
         fill="none"
-        height="24"
+        height={size}
         shapeRendering="geometricPrecision"
         stroke="currentColor"
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="1.5"
         viewBox="0 0 24 24"
-        width="24"
+        width={size}
       >
         <path d="M7 17L17 7"></path>
         <path d="M7 7h10v10"></path>
