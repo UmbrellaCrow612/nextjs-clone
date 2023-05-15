@@ -16,7 +16,7 @@ export default function SectionOne() {
                 className="opacity-40"
               />
               <TriangleSvg size={24} fill="#333333" className="opacity-40" />
-              <CircleSvg />
+              <CircleSvg size={24} fill="#333333" className="opacity-40" />
               <SnowFlakeSvg />
               <MultiXSvg />
             </div>
@@ -46,6 +46,11 @@ export default function SectionOne() {
           <TriangleSvg
             size={64}
             className="absolute -z-10 top-3 opacity-10 left-24"
+            fill="#888"
+          />
+          <CircleSvg
+            size={64}
+            className="absolute -z-10 top-3 opacity-10 left-48"
             fill="#888"
           />
           <div>
@@ -152,34 +157,43 @@ const TriangleSvg = ({
   );
 };
 
-const CircleSvg = () => {
+const CircleSvg = ({
+  size,
+  className,
+  fill,
+}: {
+  size: number;
+  className: string;
+  fill: string;
+}) => {
   return (
     <>
       <svg
         fill="none"
-        height="24"
+        height={size}
+        width={size}
+        className={className}
         viewBox="0 0 52 52"
-        width="24"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
           d="M26.0334 47.3032C25.2029 47.5627 24.0171 47.6665 23.3343 47.6665C11.5522 47.6665 2.00098 38.1153 2.00098 26.3332C2.00098 14.5511 11.5522 4.99988 23.3343 4.99988C35.1164 4.99988 44.6676 14.5511 44.6676 26.3332C44.6676 27.4632 44.5798 28.5727 44.4105 29.6552"
-          stroke="#333333"
+          stroke={fill}
           strokeWidth="1.5"
         ></path>
         <path
           d="M13.1586 14.395C11.0824 16.139 9.59068 19.0319 9.10437 20.2603C8.53383 22.1851 8.22754 24.2235 8.22754 26.3333C8.22754 38.1154 17.7788 47.6667 29.5609 47.6667C41.3429 47.6667 50.8942 38.1154 50.8942 26.3333C50.8942 14.5513 41.3429 5 29.5609 5C28.4128 5 27.4935 5.03302 26.3946 5.20762"
-          stroke="#333333"
+          stroke={fill}
           strokeWidth="1.5"
         ></path>
         <path
           d="M25.7716 41.6974C33.1396 40.4441 38.8519 33.9821 38.8519 26.2814C38.8519 17.6813 31.857 10.7096 23.2282 10.7096C20.1104 10.7096 17.2059 11.6198 14.7676 13.1882C14.1671 13.5745 13.5949 14.0007 13.0547 14.463"
-          stroke="#333333"
+          stroke={fill}
           strokeWidth="1.5"
         ></path>
         <path
           d="M26.3974 10.969L24.1135 11.7086C17.9011 13.7664 13.4209 19.6062 13.4209 26.4889C13.4209 35.0889 20.4159 42.0606 29.0446 42.0606C33.0045 42.0606 36.6203 40.5923 39.3739 38.1722C41.3982 36.393 43.7443 32.7591 44.4087 29.6032"
-          stroke="#333333"
+          stroke={fill}
           strokeWidth="1.5"
         ></path>
       </svg>
