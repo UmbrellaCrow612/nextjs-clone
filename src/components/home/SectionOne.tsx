@@ -18,7 +18,7 @@ export default function SectionOne() {
               <TriangleSvg size={24} fill="#333333" className="opacity-40" />
               <CircleSvg size={24} fill="#333333" className="opacity-40" />
               <SnowFlakeSvg size={24} fill="#333333" className="opacity-40" />
-              <MultiXSvg />
+              <MultiXSvg size={24} fill="#333333" className="opacity-40" />
             </div>
             <div className="flex items-center gap-1 text-sm">
               <span className="text-base font-semibold">Vercel Ship</span>
@@ -35,7 +35,7 @@ export default function SectionOne() {
         {/* Mobile version */}
 
         <Link
-          className="h-[6rem] border shadow-md w-[23rem] rounded-md flex justify-between items-end py-3 px-4 md:hidden relative"
+          className="h-[6rem] border shadow-md w-[23rem] rounded-md flex justify-between items-end py-3 px-4 md:hidden relative overflow-hidden"
           href="/"
         >
           <WiredRectangleSvg
@@ -56,6 +56,11 @@ export default function SectionOne() {
           <SnowFlakeSvg
             size={64}
             className="absolute -z-10 top-3 opacity-10 left-64"
+            fill="#888"
+          />
+          <MultiXSvg
+            size={64}
+            className="absolute -z-10 top-3 opacity-10 left-80"
             fill="#888"
           />
           <div>
@@ -306,77 +311,86 @@ const SnowFlakeSvg = ({
   );
 };
 
-const MultiXSvg = () => {
+const MultiXSvg = ({
+  size,
+  className,
+  fill,
+}: {
+  size: number;
+  className: string;
+  fill: string;
+}) => {
   return (
     <>
       <svg
         fill="none"
-        height="24"
+        height={size}
+        width={size}
+        className={className}
         viewBox="0 0 52 52"
-        width="24"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
           d="M40.5568 14.0333L37.2512 8.11052L37.2692 8.07932L44.0512 7.98068L47.3568 13.9034L47.3388 13.9346L40.5568 14.0333Z"
-          stroke="#333333"
+          stroke={fill}
           strokeLinejoin="round"
           strokeWidth="1.5"
         ></path>
         <path
           d="M33.2861 14.7068L36.7389 20.6871L40.5616 14.0659L37.1089 8.08557L33.2861 14.7068Z"
-          stroke="#333333"
+          stroke={fill}
           strokeLinejoin="round"
           strokeWidth="1.5"
         ></path>
         <path
           d="M26.3212 38.702L33.1032 38.8006L33.1212 38.8318L29.8156 44.7545L23.0336 44.6559L23.0156 44.6247L26.3212 38.702Z"
-          stroke="#333333"
+          stroke={fill}
           strokeLinejoin="round"
           strokeWidth="1.5"
         ></path>
         <path
           d="M40.2997 38.702L47.0817 38.8006L47.0997 38.8318L43.7941 44.7545L37.0121 44.6559L36.9941 44.6247L40.2997 38.702Z"
-          stroke="#333333"
+          stroke={fill}
           strokeLinejoin="round"
           strokeWidth="1.5"
         ></path>
         <path
           d="M4.72795 38.2497L8.18068 44.23L15.3238 31.8577L11.8711 25.8774L4.72795 38.2497Z"
-          stroke="#333333"
+          stroke={fill}
           strokeLinejoin="round"
           strokeWidth="1.5"
         ></path>
         <path
           d="M5.11601 13.9705L8.56875 7.99019L26.2923 38.6884L22.8396 44.6687L5.11601 13.9705Z"
-          stroke="#333333"
+          stroke={fill}
           strokeLinejoin="round"
           strokeWidth="1.5"
         ></path>
         <path
           d="M19.0936 13.9705L22.5463 7.99019L40.2699 38.6884L36.8171 44.6687L19.0936 13.9705Z"
-          stroke="#333333"
+          stroke={fill}
           strokeLinejoin="round"
           strokeWidth="1.5"
         ></path>
         <path
           d="M15.4728 7.99011L8.56738 7.99011L26.291 38.6883L33.1964 38.6883L15.4728 7.99011Z"
-          stroke="#333333"
+          stroke={fill}
           strokeLinejoin="round"
           strokeWidth="1.5"
         ></path>
         <path
           d="M29.4514 7.99011L22.5459 7.99011L40.2695 38.6883L47.175 38.6883L29.4514 7.99011Z"
-          stroke="#333333"
+          stroke={fill}
           strokeLinejoin="round"
           strokeWidth="1.5"
         ></path>
         <path
           d="M40.3245 26.438V27.188C40.5925 27.188 40.8401 27.045 40.974 26.813L40.3245 26.438ZM40.0419 26.438L39.3924 26.813C39.5263 27.045 39.7739 27.188 40.0419 27.188V26.438ZM47.4677 14.0657L48.1172 14.4407C48.2511 14.2086 48.2511 13.9227 48.1172 13.6907C47.9832 13.4586 47.7356 13.3157 47.4677 13.3157V14.0657ZM40.5622 14.0657V13.3157C40.2942 13.3157 40.0466 13.4586 39.9127 13.6907L40.5622 14.0657ZM36.7305 20.7024L36.0809 20.3274C35.947 20.5595 35.947 20.8454 36.0809 21.0774L36.7305 20.7024ZM40.3245 25.688H40.0419V27.188H40.3245V25.688ZM46.8181 13.6907L39.675 26.063L40.974 26.813L48.1172 14.4407L46.8181 13.6907ZM40.5622 14.8157H47.4677V13.3157H40.5622V14.8157ZM37.38 21.0774L41.2117 14.4407L39.9127 13.6907L36.0809 20.3274L37.38 21.0774ZM36.0809 21.0774L39.3924 26.813L40.6914 26.063L37.38 20.3274L36.0809 21.0774Z"
-          fill="#333333"
+          fill={fill}
         ></path>
         <path
           d="M8.17871 44.23L7.52919 43.855C7.39522 44.0871 7.39522 44.373 7.52919 44.605C7.66317 44.8371 7.91076 44.98 8.17871 44.98L8.17871 44.23ZM15.3137 31.8718L15.9632 31.4968C15.8293 31.2648 15.5817 31.1218 15.3137 31.1218C15.0458 31.1218 14.7982 31.2648 14.6642 31.4968L15.3137 31.8718ZM15.0842 44.23V44.98C15.3521 44.98 15.5997 44.8371 15.7337 44.605L15.0842 44.23ZM18.7665 37.8521L19.416 38.2271C19.55 37.9951 19.55 37.7092 19.416 37.4771L18.7665 37.8521ZM8.82823 44.605L15.9632 32.2468L14.6642 31.4968L7.52919 43.855L8.82823 44.605ZM15.0842 43.48L8.17871 43.48L8.17871 44.98L15.0842 44.98V43.48ZM18.1169 37.4771L14.4347 43.855L15.7337 44.605L19.416 38.2271L18.1169 37.4771ZM19.416 37.4771L15.9632 31.4968L14.6642 32.2468L18.1169 38.2271L19.416 37.4771Z"
-          fill="#333333"
+          fill={fill}
         ></path>
       </svg>
     </>
