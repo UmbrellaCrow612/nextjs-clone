@@ -5,7 +5,7 @@ export default function SectionOne() {
     <>
       <section className="flex items-center justify-center max-w-screen-xl mx-auto h-[8rem]">
         <Link
-          className="border rounded-md shadow-md border-[#efefef] flex items-center h-[3.7rem] hover:bg-opacity-10 hover:bg-gray-200 transition-all ease-in-out gap-3"
+          className="border rounded-md shadow-md border-[#efefef] md:flex items-center h-[3.7rem] hover:bg-opacity-10 hover:bg-gray-200 transition-all ease-in-out gap-3 hidden"
           href="/"
         >
           <div className="flex gap-8 px-3">
@@ -27,6 +27,8 @@ export default function SectionOne() {
             <ArrowRight />
           </div>
         </Link>
+
+        {/* Mobile version */}
       </section>
     </>
   );
