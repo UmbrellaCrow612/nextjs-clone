@@ -9,7 +9,7 @@ export default function SectionTwo() {
         </div>
         <div className="flex items-center justify-center py-5 leading-relaxed">
           <p
-            className="text-[#6a6a6a] text-sm tracking-tight max-w-[24rem] text-center"
+            className="text-[#6a6a6a] text-sm tracking-tight max-w-[24rem] text-center md:max-w-none md:px-5 md:text-base lg:text-lg"
             style={{ wordSpacing: "0.24rem", lineHeight: "1.6rem" }}
           >
             Used by some of the world&apos;s largest companies, Next.js enables
@@ -30,7 +30,9 @@ export default function SectionTwo() {
               Learn Next js{" "}
             </button>
           </div>
-          <button className="px-2 py-3 text-sm text-gray-500 rounded-md">▲ ~ npx create-next-app@latest</button>
+          <button className="px-2 py-3 text-sm text-gray-500 rounded-md">
+            ▲ ~ npx create-next-app@latest
+          </button>
         </div>
       </section>
     </>
